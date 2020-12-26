@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    
-<script src="script.js">
+    <div id="container">
+        <div id="start">Start Quiz!</div>
+        <div id=quiz>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer ('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer ('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer ('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer ('D')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id ="timeGuage"></div>
+            </div>
+        </div>
+        <div id="score"></div>
+    </div>
+<script src="./assets/js/script.js">
 
 </script>
 
