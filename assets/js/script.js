@@ -34,7 +34,7 @@ var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
 
-// Seconds left is 15 seconds per question:
+// Seconds left is 15 seconds per question (remember to add one second for array starting at 0)
 var secondsLeft = 76;
 var holdInterval = 0;
 var penalty = 10;
@@ -89,11 +89,11 @@ function compare(event) {
         // Correct condition 
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Correct!";
         } else {
             // -5 seconds for wrong answer
             secondsLeft = secondsLeft - penalty;
-            createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Wrong!";
         }
 
     }
@@ -103,7 +103,7 @@ function compare(event) {
     if (questionIndex >= questions.length) {
 
         allDone();
-        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+        createDiv.textContent = "End of quiz." + " " + "You got  " + score + "/" + questions.length + " Correct!";
     } else {
         render(questionIndex);
     }
@@ -117,7 +117,7 @@ function allDone() {
 
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
-    createH1.textContent = "YOU DID IT!"
+    createH1.textContent = "All done!"
 
     questionsDiv.appendChild(createH1);
 
@@ -146,7 +146,7 @@ function allDone() {
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
-    createInput.textContent = "";
+    createInput.textContent = "initials";
 
     questionsDiv.appendChild(createInput);
 
@@ -169,7 +169,7 @@ function allDone() {
         } else {
             var finalScore = {
                 initials: initials,
-                score: timeRemaining
+                score: -timeRemaining
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
