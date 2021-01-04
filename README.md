@@ -5,3 +5,5 @@
 ## At the end of the game, the user is prompted to enter their intials and record both their initials and score on a local device. The user can then review previous high scores and also has the option of clearing the high score history out. 
 
 ## website URL https://chris6661.github.io/04-ch-challenge/
+
+<iframe src="https://drive.google.com/file/d/1q5LUQZIGliEq3lMSctkPHd77_hsOqbfv/preview" width="640" height="480"></iframe>
